@@ -70,9 +70,13 @@ function draw() {
 		textSize(50);
 		text('X wins',180,60);
 	}
-	if (win == 1){
+	else if (win == 1){
 		textSize(50);
 		text('O wins',180,60);
+	}
+	else if (drawn == 9){
+		textSize(50);
+		text('draw',190,60);
 	}
 	
 }
