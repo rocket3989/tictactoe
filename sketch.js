@@ -8,11 +8,9 @@ function preload(){
 	//fontVector = loadFont("./libraries/Vectorb.ttf");
 }
 function setup() {
-	//socket = io.connect('http://localhost:3000');
 	frameRate(60);
 	createCanvas(windowWidth, windowHeight);
 	noStroke();
-	//noFill();
 	fill(0);
 	
 	for(i = 0; i<3;i++){
@@ -30,7 +28,7 @@ function mouseClicked(){
 	for(i = 0;i<9;i++){
 		boxes[i].clicked();
 	}
-	if((win !=2 || drawn == 9)&& !clicked ){
+	if(win !=2 || (drawn == 9&& !clicked) ){
 		for(i = 0;i<9;i++){
 			boxes[i].valueSet(2);
 		}
@@ -63,7 +61,6 @@ function draw() {
 			win = boxes[0].value;
 		if(abs(boxes[2].winTest()+boxes[4].winTest()+boxes[6].winTest())>2)
 			win = boxes[2].value;
-		//console.log(boxes[0].winTest()+boxes[1].winTest()+boxes[2].winTest());
 		clicked = false;
 	}
 	if (win == 0){
