@@ -1,6 +1,7 @@
 var turn = 0;
 var clicked = false;
 var win = 2;
+var drawn = 0;
 var socket;
 var boxes =[];
 function preload(){
@@ -29,17 +30,19 @@ function mouseClicked(){
 	for(i = 0;i<9;i++){
 		boxes[i].clicked();
 	}
-	if(win !=2){
+	if((win !=2 || drawn == 9)&& !clicked ){
 		for(i = 0;i<9;i++){
 			boxes[i].valueSet(2);
 		}
 		win = 2;
 		turn = 0;
+		drawn = 0;
 	}
 	
 }
 	
 function draw() {
+	console.log(drawn);
 	background(255);
 	rect(200,100,10,320);
 	rect(310,100,10,320);

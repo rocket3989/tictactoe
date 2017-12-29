@@ -46,6 +46,7 @@ function xobox(posx,posy,index){
 			this.value = turn;
 			turn = (turn+1)%2;
 			clicked = true;
+			drawn++;
 		}
 	}
 	
