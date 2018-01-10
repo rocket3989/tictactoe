@@ -36,7 +36,7 @@ function xobox(posx,posy,index){
 	
 	this.hover = function(){
 		push();
-			fill(150,180,0);
+			fill(150,180,180);
 			if(mouseX>this.posx&&mouseX<this.posx+100&&mouseY>this.posy&&mouseY<this.posy+100&&this.value==2)
 				rect(posx,posy,100,100);
 		pop();
